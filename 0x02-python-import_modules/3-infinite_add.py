@@ -6,4 +6,3 @@ if __name__ == "__main__":
         if arg != sys.argv[0]:
             r += int(arg)
     print(r)
-
