@@ -4,4 +4,4 @@ def no_c(my_string):
     for r in m:
         if r == 'c' or r == 'C':
             m.remove(r)
-        return r
+        return m
