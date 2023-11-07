@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-m = 0
-for f in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(f - m)), end="")
-    m = 32 if m == 0 else 0
+for i in range(122, 96, -1):
+    if i % 2 != 0:
+        i = i - 32
+    print(f"{i:c}", end="")
