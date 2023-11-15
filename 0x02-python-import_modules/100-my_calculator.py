@@ -17,7 +17,7 @@ else:
             print("{} - {} = {}".format(a, b, sub(a, b)))
         elif argv[2] == "*":
             print("{} * {} = {}".format(a, b, mul(a, b)))
-        elif argv[2] == "*":
+        elif argv[2] == "/":
             print("{} / {} = {}".format(a, b, div(a, b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
