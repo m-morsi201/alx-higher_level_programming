@@ -1,4 +1,4 @@
-#!/usr/bin/puthon3
+#!/usr/bin/python3
 """
 Module with append_write() function.
 """
