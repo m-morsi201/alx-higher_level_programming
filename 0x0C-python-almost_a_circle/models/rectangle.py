@@ -118,7 +118,7 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Function that prints in stdout the Rectangle instance with the character #.
+        Function that prints the Rectangle instance with the character #.
         """
         if self.__y > 0:
             for i in range(self.__y):
@@ -130,3 +130,11 @@ class Rectangle(Base):
                     print(" " * self.__x, end="")
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """
+        function to prints rectangle.
+        """
+        return ("[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".
+                format(self.id, self.__x, self.__y, self.__width,
+                       self.__height))
