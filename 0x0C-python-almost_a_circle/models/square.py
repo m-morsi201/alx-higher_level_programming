@@ -23,6 +23,7 @@ class Square(Rectangle):
         Getter method for size that returns:
             a size of one side of square.
         """
+
         return self.width
 
     @size.setter
@@ -32,6 +33,7 @@ class Square(Rectangle):
             TypeError: if width is not an integer.
             ValueError: if width is less than or equal to zero.
         """
+
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -45,6 +47,7 @@ class Square(Rectangle):
         __str__ method should return [Square] (<id>) <x>/<y> - <size>.
         to Prints a square
         """
+
         return ("[Square] ({}) {:d}/{:d} - {:d}".
                 format(self.id, self.x, self.y, self.size))
 
@@ -52,6 +55,7 @@ class Square(Rectangle):
         """
         Function to assigns an argument to each attribute
         """
+
         if args is not None and\
                 len(args) != 0:
             attr_list = ['id', 'size', 'x', 'y']
@@ -68,3 +72,15 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Method that representation of a Square.
+        """
+
+        dict1 = self.__dict__
+        dict2 = {}
+
+        for k in dict1:
+            dict2[k] = getattr(self, k)
+        return dict2

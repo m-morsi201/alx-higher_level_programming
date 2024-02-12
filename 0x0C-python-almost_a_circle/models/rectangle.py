@@ -152,3 +152,16 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Method for returns the dictionary representation of a Rectangle.
+        """
+
+        attr_list = ['id', 'width', 'height', 'x', 'y']
+        dict1 = {}
+
+        for k in attr_list:
+            dict1[k] = getattr(self, k)
+
+        return dict1
