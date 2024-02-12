@@ -4,6 +4,7 @@ Module that Defines a class Square that inherits from Rectangle.
 """
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     Definition of Square class.
@@ -11,9 +12,9 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """
-        Class constructor that: creates new instances of Square
+        Class constructor that: creates new instances of Square.
         """
-        
+
         super().__init__(size, size, x, y, id)
 
     @property
