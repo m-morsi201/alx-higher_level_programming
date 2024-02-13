@@ -55,7 +55,6 @@ class Base():
         with open(fname, 'w') as f:
             f.write(ls)
 
-
     @staticmethod
     def from_json_string(json_string):
         """
@@ -64,3 +63,17 @@ class Base():
         if json_string is None or len(json_string) == 0:
             return []
         return(json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Class method that returns an instance with:
+            all attributes already set.
+        """
+        if cls.__name__ == "Rectangle":
+            n = cls(1, 1)
+        if cls.__name__ == "Square":
+            n = cls(1)
+        n.update(**dictionary)
+
+        return(n)
