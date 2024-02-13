@@ -78,9 +78,13 @@ class Square(Rectangle):
         Method that representation of a Square.
         """
 
-        dict1 = self.__dict__
+        attr_list = ['id', 'size', 'x', 'y']
         dict2 = {}
 
-        for k in dict1:
-            dict2[k] = getattr(self, k)
+        for k in attr_list:
+            if k == 'size':
+                dict2[k] = getattr(self, 'width')
+            else:
+                dict2[k] = getattr(self, k)
+
         return dict2
