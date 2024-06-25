@@ -5,7 +5,7 @@ if (!Number.isInteger(xTimes)) {
   console.log('Missing number of occurrences');
 } else {
   for (let i = 0; i < xTimes; i++) {
-    // in for loop to handel negative case (i < xTimes)
+    // in for loop to handel negative case I used (i < xTimes).
     console.log('C is fun');
   }
 }
