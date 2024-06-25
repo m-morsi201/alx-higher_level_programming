@@ -3,8 +3,9 @@
 const xTimes = parseInt(process.argv[2], 10);
 if (!Number.isInteger(xTimes)) {
   console.log('Missing number of occurrences');
-} else if (xTimes > 0) {
-  for (let i = 0; i !== xTimes; i++) {
+} else {
+  for (let i = 0; i < xTimes; i++) {
+    // in for loop to handel negative case (i < xTimes)
     console.log('C is fun');
   }
 }
