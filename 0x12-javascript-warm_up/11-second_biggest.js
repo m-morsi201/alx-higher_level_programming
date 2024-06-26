@@ -5,4 +5,8 @@ function descendingOrder (arr) {
   return (arr.sort().reverse());
 }
 const orderNums = descendingOrder(nums);
-console.log(orderNums[1]);
+if (orderNums <= 1) {
+  console.log('0');
+} else {
+  console.log(orderNums[1]);
+}
